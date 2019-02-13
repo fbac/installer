@@ -7,6 +7,12 @@ EOF
   default = "1.0"
 }
 
+variable "aws_bootstrap_ec2_type" {
+  type        = "string"
+  description = "Instance size for the bootstrap node(s). Example: `m4.large`."
+  default = "m4.large"
+}
+
 variable "aws_master_ec2_type" {
   type        = "string"
   description = "Instance size for the master node(s). Example: `m4.large`."

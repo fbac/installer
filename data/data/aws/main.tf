@@ -13,6 +13,7 @@ provider "aws" {
 module "bootstrap" {
   source = "./bootstrap"
 
+  instance_type            = "${var.aws_bootstrap_ec2_type}"
   ami                      = "${var.aws_ec2_ami_override}"
   cluster_name             = "${var.cluster_name}"
   ignition                 = "${var.ignition_bootstrap}"
